@@ -6,7 +6,7 @@ import com.example.demo.entity.Student;
 
 public interface StudentService {
     Student insertStudent(Student st);
-    List<Student> getAllStudents();
+    List<Student> get();
     Optional<Student> getOneStudent(Long id);
     void deleteStudent(Long id);
 }
