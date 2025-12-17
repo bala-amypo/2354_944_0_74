@@ -1,6 +1,8 @@
 package com.example.demo.newentity;
 
+import jakarta.peristence
 import jakarta.peristence.Id;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 public class NewfileEntity{
