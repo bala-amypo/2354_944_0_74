@@ -1,11 +1,15 @@
 package com.example.demo.newentity;
 
+import jakarta.peristence.column;
+import jakarta.peristence.Entity;
 import jakarta.peristence.GeneratedValue;
 import jakarta.peristence.GenerationType;
 import jakarta.peristence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
+@Entity
+@Table(name="Student")
 public class NewfileEntity{
     @Id
     @GeneratedValue(Strategy=GenerationType.IDENTITY)
