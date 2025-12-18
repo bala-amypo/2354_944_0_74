@@ -13,30 +13,29 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Studententity;
 import com.example.demo.service.Studentservice;
-
 @RestController
-public class Studentcontoller {
-    @Autowired
-    Studentservice src;
-    @PostMapping("/post")
-    public Studententity postdata(@RequestBody Studententity st){
-      return src.savedata(st);
+public class Studentcontroller {
+@Autowired
+Studentservice src;
+@PostMapping("/post")
 
+    public Studententity postdata(@RequestBody Studententity st){
+        return src.savedata(st);
     }
     @GetMapping("/get")
-    public List<Studententity> getdata(){
-      return src.retdata();
+    public List<Studententity>getdata(){
+        return src.retdata();
     }
-@GetMapping("/getid/{id}")
-    public Studententity getidval(@PathVariable int id) {
-      return src.id(id);
+    @GetMapping("/get/{id}")
+    public Studententity getIdval(@PathVariable int id){
+        return src.id(id);
     }
-    @PutMapping("/put/(id)")
+    @PutMapping("/updatedata/{id}")
     public Studententity update(@PathVariable int id,@RequestBody Studententity st){
-      return src.put(id,st);
+        return src.updateStudent(id,st);
     }
-    @DeleteMapping("/delete/(id)")
-    public Studententity delete(@PathVariable int id){
-      return src.del(id);
+    @DeleteMapping("/delete/{id}")
+    public Studententity deleteStudent(@PathVariable int id){
+        return src.deleteStudent(id);
     }
 }
